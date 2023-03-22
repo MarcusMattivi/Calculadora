@@ -4,50 +4,116 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.EditText;
-import android.os.Bundle;
-import android.widget.Toast;
+import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
-    }
+    public class Calc {
+        /*Declaração dos métodos*/
+        public int som(int num1, int num2) {
 
-    public class Comon extends AppCompatActivity {
-        EditText PN, SN;
+            return num1 + num2;
 
-        protected void onCreate(Bundle savedInstanceState) { //Primeiro método a ser executadosuper.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_main);
-            getSupportActionBar().hide(); //Obtem o banner com o titulo e esconde
-            PN = findViewById(R.id.PN); //Vincula um atributo java com o do xml
-            PN = findViewById(R.id.PN);
+        }
+        public int sub(int num1, int num2){
 
-            public void subtraçao Object View;
-            (View v){
-                while (PN > 0) {
-                    PN--;
-                    PN + -= 60;
-                }
-                while (SN > 0) {
-                    SN--;
-                    SN += 60;
-                }
-                int resultCalculo = PN - SN;
-                int resultCalculo = PN + SN;
-                }
-                RC.setText(resultCalculo + "PN,SN");
+            return num1 - num2;
 
-                @Override
-                protected void onCreate (Bundle savedInstanceState){
-                    super.onCreate(savedInstanceState);
-                    setContentView(R.layout.activity_main);
+        }
+        public int div(int num1,int num2){
+
+            return num1 / num2;
+
+        }
+        public int mult(int num1, int num2){
+
+            return num1 - num2;
+
+        }
+        public static void main (String args[]){
+
+            //criando um objeto c a apartir do metodo calc
+            Calc c = new Calc();
+
+            //declarando as varíaveis
+            int opcao = 5;
+            int num1;
+            int num2;
+
+            Scanner input = new Scanner(System.in);
+
+
+            System.out.println("-Escolha uma opção-");
+            System.out.println("1. Soma");
+            System.out.println("2. Subtracao");
+            System.out.println("3. Multiplicacao");
+            System.out.println("4. Divisao");
+            System.out.println("0. Sair");
+            System.out.println("Operação: ");
+
+            opcao = input.nextInt();
+
+            while (opcao != 0) {
+
+
+                if (opcao == 1) {
+
+
+                    Scanner input1 = new Scanner(System.in);
+
+                    System.out.println("Qual o primeiro numero: ");
+                    num1 = input1.nextInt();
+                    System.out.println("Qual o segundo numero: ");
+                    num2 = input1.nextInt();
+
+                    int operacao = c.som(num1, num2);
+
+                    System.out.println(operacao);
+                    break;
                 }
-                public void calculoSoma (View v){
-                    int PrN = Integer.parseInt(PN.getText().toString());
-                    int SgN = Integer.parseInt(SN.getText().toString());
-                    int resultCalculo = PN + SN;
+                if (opcao == 2) {
+
+                    Scanner input1 = new Scanner(System.in);
+
+                    System.out.println("Qual o primeiro numero: ");
+                    num1 = input1.nextInt();
+                    System.out.println("Qual o segundo numero: ");
+                    num2 = input1.nextInt();
+                    int operacao = c.sub(num1, num2);
+
+                    System.out.println(operacao);
+
+                    break;
                 }
+                if (opcao == 3) {
+                    Scanner input1 = new Scanner(System.in);
+
+                    System.out.println("Qual o primeiro numero: ");
+                    num1 = input1.nextInt();
+                    System.out.println("Qual o segundo numero: ");
+                    num2 = input1.nextInt();
+                    int operacao = c.mult(num1, num2);
+
+                    System.out.println(operacao);
+                    break;
+                }
+                if (opcao == 4) {
+                    Scanner input1 = new Scanner(System.in);
+
+                    System.out.println("Qual o primeiro numero: ");
+                    num1 = input1.nextInt();
+                    System.out.println("Qual o segundo numero: ");
+                    num2 = input1.nextInt();
+                    int operacao = c.div(num1, num2);
+
+                    System.out.println(operacao);
+                    break;
+                }
+                else{
+                    System.out.println("????");
+                    break;
+                }
+
             }
+        }
+    }
