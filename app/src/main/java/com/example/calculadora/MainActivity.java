@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         num1 = findViewById(R.id.num1);
         num2 = findViewById(R.id.num2);
-        int result = 0;
+        int resultado = 0;
         float resultFloat = 0;
     }
     public static class Calc {
@@ -37,61 +37,14 @@ public class MainActivity extends AppCompatActivity {
             return num1 * num2;
         }
 
-        // --------------- Metodo principal
-
         public void main(String[] args) {
             //criando um objeto c a apartir do metodo calc
             Calc c = new Calc();
 
             //declarando as varíaveis
-            int opcao;
             int num1;
             int num2;
 
-            Scanner input = new Scanner(System.in);
-            System.out.println("-Escolha uma opção-");
-            System.out.println("1. Soma");
-            System.out.println("2. Subtracao");
-            System.out.println("3. Multiplicacao");
-            System.out.println("4. Divisao");
-            System.out.println("0. Sair");
-            System.out.println("Operação: ");
-
-            opcao = input.nextInt();
-
-            while (opcao != 0) {
-                Scanner input1 = new Scanner(System.in);
-
-                System.out.println("Qual o primeiro numero: ");
-                num1 = input1.nextInt();
-                System.out.println("Qual o segundo numero: ");
-                num2 = input1.nextInt();
-
-                if (opcao == 1) {
-                    int operacao = c.som(num1, num2);
-                    System.out.printf("\nO resultado da soma é: %d\n", operacao);
-                    break;
-
-                } else if (opcao == 2) {
-                    int operacao = c.sub(num1, num2);
-                    System.out.printf("\nO resultado da subtração é: %d\n", operacao);
-                    break;
-
-                } else if (opcao == 3) {
-                    int operacao = c.mult(num1, num2);
-                    System.out.printf("\nO resultado da multiplicação é: %d\n", operacao);
-                    break;
-
-                } else if (opcao == 4) {
-                    int operacao = c.div(num1, num2);
-                    System.out.printf("\nO resultado da divisão é: %d\n", operacao);
-                    break;
-
-                } else {
-                    System.out.println("????");
-                    break;
                 }
             }
         }
-    }
-}
