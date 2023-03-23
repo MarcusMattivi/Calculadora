@@ -35,7 +35,7 @@
         android:layout_marginTop="50dp"
         android:layout_marginEnd="50dp"
         android:inputType="textPersonName"
-        android:text="Primeiro Numero"
+        android:text="1º numero"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +53,7 @@
         android:layout_marginEnd="50dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Segundo Numero"
+        android:text="2º numero"
         android:textColor="#F8F8F8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -115,15 +115,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="/"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="321dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.253"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469" />
 
     <Button
         android:id="@+id/mult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="*"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="321dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.712"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.468" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
