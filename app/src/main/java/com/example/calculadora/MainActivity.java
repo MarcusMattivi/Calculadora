@@ -13,19 +13,22 @@ public class MainActivity extends AppCompatActivity {
         public int som(int num1, int num2) {
             return num1 + num2;
         }
-        public int sub(int num1, int num2){
+
+        public int sub(int num1, int num2) {
             return num1 - num2;
         }
-        public int div(int num1,int num2){
+
+        public int div(int num1, int num2) {
             return num1 / num2;
         }
-        public int mult(int num1, int num2){
+
+        public int mult(int num1, int num2) {
             return num1 * num2;
         }
 
         // --------------- Metodo principal
 
-        public static void main (String args[]){
+        public void main(String[] args) {
             //criando um objeto c a apartir do metodo calc
             Calc c = new Calc();
 
@@ -53,30 +56,27 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println("Qual o segundo numero: ");
                 num2 = input1.nextInt();
 
-                if ( opcao == 1 ) {
+                if (opcao == 1) {
                     int operacao = c.som(num1, num2);
                     System.out.printf("\nO resultado da soma é: %d\n", operacao);
                     break;
-                }
-                else if (opcao == 2) {
+                } else if (opcao == 2) {
                     int operacao = c.sub(num1, num2);
                     System.out.printf("\nO resultado da subtração é: %d\n", operacao);
                     break;
-                }
-                else if (opcao == 3) {
+                } else if (opcao == 3) {
                     int operacao = c.mult(num1, num2);
                     System.out.printf("\nO resultado da multiplicação é: %d\n", operacao);
                     break;
-                }
-                else if (opcao == 4) {
+                } else if (opcao == 4) {
                     int operacao = c.div(num1, num2);
                     System.out.printf("\nO resultado da divisão é: %d\n", operacao);
                     break;
-                }
-                else{
+                } else {
                     System.out.println("????");
                     break;
                 }
-            } // fim do while - usuario optou por sair
-        }  // fim do metodo principal
+            }
+        }
     }
+}
