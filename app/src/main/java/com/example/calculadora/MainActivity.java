@@ -2,13 +2,12 @@ package com.example.calculadora;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.widget.EditText;
+
 import java.util.Scanner;
 
 public class MainActivity extends AppCompatActivity {
 
-    public class Calc {
+    public static class Calc {
         /*Declaração dos métodos*/
         public int som(int num1, int num2) {
             return num1 + num2;
