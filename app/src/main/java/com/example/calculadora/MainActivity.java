@@ -24,26 +24,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void calculoSom(View v) {
-        int num1 = Integer.parseInt(num1.getText().toString());
-        int num2 = Integer.parseInt(num2.getText().toString());
-        resultado.setText(num1 + num2);
+        int n1 = Integer.parseInt(num1.getText().toString());
+        int n2 = Integer.parseInt(num2.getText().toString());
+        resultado.setText((n1 + n2)+"");
     }
 
     public void calculoSub(View v) {
-        int num1 = Integer.parseInt(num1.getText().toString());
-        int num2 = Integer.parseInt(num2.getText().toString());
-        resultado.setText(num1 - num2);
+        int n1 = Integer.parseInt(num1.getText().toString());
+        int n2 = Integer.parseInt(num2.getText().toString());
+        resultado.setText((n1 - n2)+"");
     }
 
     public void calculoDiv(View v) {
-        int num1 = Integer.parseInt(num1.getText().toString());
-        int num2 = Integer.parseInt(num2.getText().toString());
-        resultado.setText(num1 / num2);
+        int n1 = Integer.parseInt(num1.getText().toString());
+        int n2 = Integer.parseInt(num2.getText().toString());
+        resultado.setText((n1 / n2)+"");
     }
 
     public void calculoMult(View v) {
-        int num1 = Integer.parseInt(num1.getText().toString());
-        int num2 = Integer.parseInt(num2.getText().toString());
-        resultado.setText(num1 * num2);
+        int n1 = Integer.parseInt(num1.getText().toString());
+        int n2 = Integer.parseInt(num2.getText().toString());
+        resultado.setText((n1 * n2)+"");
     }
 }
