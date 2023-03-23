@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             Calc c = new Calc();
 
             //declarando as varíaveis
-            int opcao = 5;
+            int opcao;
             int num1;
             int num2;
 
@@ -59,18 +59,22 @@ public class MainActivity extends AppCompatActivity {
                     int operacao = c.som(num1, num2);
                     System.out.printf("\nO resultado da soma é: %d\n", operacao);
                     break;
+
                 } else if (opcao == 2) {
                     int operacao = c.sub(num1, num2);
                     System.out.printf("\nO resultado da subtração é: %d\n", operacao);
                     break;
+
                 } else if (opcao == 3) {
                     int operacao = c.mult(num1, num2);
                     System.out.printf("\nO resultado da multiplicação é: %d\n", operacao);
                     break;
+
                 } else if (opcao == 4) {
                     int operacao = c.div(num1, num2);
                     System.out.printf("\nO resultado da divisão é: %d\n", operacao);
                     break;
+
                 } else {
                     System.out.println("????");
                     break;
